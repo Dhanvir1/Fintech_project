@@ -1,0 +1,17 @@
+{
+	"name": "bookmyshow",
+	"properties": {
+		"content": {
+			"query": "Create schema bookymyshow;\n\nCREATE TABLE bookymyshow.bookings_fact (\n    order_id NVARCHAR(50) NOT NULL,\n    booking_time DATETIME2,\n    customer_id NVARCHAR(50),\n    customer_name NVARCHAR(100),\n    customer_email NVARCHAR(100),\n    event_id NVARCHAR(50),\n    event_name NVARCHAR(100),\n    event_location NVARCHAR(200),\n    seat_number NVARCHAR(10),\n    seat_price FLOAT,\n    event_category NVARCHAR(50),\n    booking_day_of_week NVARCHAR(20),\n    booking_hour INT,\n    payment_id NVARCHAR(50),\n    payment_time DATETIME2,\n    amount FLOAT,\n    payment_method NVARCHAR(50),\n    payment_type NVARCHAR(50),\n    booking_event_time DATETIME2,\n    payment_event_time DATETIME2\n);\n\nselect * from bookymyshow.bookings_fact;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AirBnBSqlPool",
+				"poolName": "AirBnBSqlPool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

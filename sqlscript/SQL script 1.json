@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "-- Create ADF factory as a user in the SQL pool\nCREATE USER [AirBnB-Project-DF] FROM EXTERNAL PROVIDER;\n\n-- Give full permissions (db_owner)\nEXEC sp_addrolemember 'db_owner', 'AirBnB-Project-DF';\n\n-- Verify\nSELECT name, type_desc FROM sys.database_principals WHERE name = 'AirBnB-Project-DF';",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "AirBnBSqlPool",
+				"poolName": "AirBnBSqlPool"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

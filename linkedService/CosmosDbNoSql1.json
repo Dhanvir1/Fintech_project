@@ -1,0 +1,16 @@
+{
+	"name": "CosmosDbNoSql1",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "CosmosDb",
+		"typeProperties": {
+			"accountEndpoint": "https://azure-cosmos-10.documents.azure.com:443/",
+			"database": "AirBnB"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
